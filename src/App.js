@@ -18,10 +18,9 @@ function App() {
   console.log(data);
   useEffect(() => {
     setData(null);
-    /* axios.get(`https://api.nasa.gov/planetary/apod?api_key=AOrjOCj81fYxcoA76fqynX0vrTSVBLf6Qt8U8gsO&date=${date}`)
-      .then(res => setData(res.data)) */
     setTimeout(() => {
-      setData(fakeData);
+      axios.get(`https://api.nasa.gov/planetary/apod?api_key=AOrjOCj81fYxcoA76fqynX0vrTSVBLf6Qt8U8gsO&date=${date}`)
+        .then(res => setData(res.data))
     }, 2000);
   }, [date]);
 
