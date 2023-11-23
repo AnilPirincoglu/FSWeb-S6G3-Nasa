@@ -1,9 +1,14 @@
-import "./Image.css";
+import styled from "styled-components";
+
 const Image = (props) => {
     const { url } = props;
 
+    const Image = styled.img`
+        width: 100%;
+    `;
+
     return <div className="img-container">
-        <img src={url} />
+        <Image src={url} />
     </div>
 }
 
